@@ -1,0 +1,17 @@
+﻿@using AlloyTraining.Models.ViewModels
+@using AlloyTraining.Models.Pages
+@model IPageViewModel<SitePageData>
+@{
+    // nest the right related content inside the root layout
+    Layout = "~/Views/Shared/Layouts/_Root.cshtml";
+}
+<div class="row">
+    <div class="span8">
+        Copyright © 2019 Episerver. All rights reserved.
+        Exercise B4 – Creating page types with a shared layout and navigation 107 of 226
+        @RenderBody()
+    </div>
+    <div class="span4">
+        @RenderSection("RelatedContent", required: false)
+    </div>
+</div>

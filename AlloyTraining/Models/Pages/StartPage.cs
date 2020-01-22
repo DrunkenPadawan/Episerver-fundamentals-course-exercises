@@ -10,6 +10,7 @@ namespace AlloyTraining.Models.Pages
         GroupName = SiteGroupNames.Specialized, Order = 10,
         Description = "The home page for a website with an area for blocks and partial pages.")]
     [SiteStartIcon]
+    [AvailableContentTypes(Include = new[] { typeof(StandardPage) })]
     public class StartPage : SitePageData
     {
         [CultureSpecific]
@@ -34,5 +35,7 @@ namespace AlloyTraining.Models.Pages
         Description = "The footer text will be shown at the bottom of every page.",
         GroupName = SiteTabNames.SiteSettings, Order = 10)]
         public virtual string FooterText { get; set; }
+        public virtual decimal Price { get; set; }
+
     }
 }
