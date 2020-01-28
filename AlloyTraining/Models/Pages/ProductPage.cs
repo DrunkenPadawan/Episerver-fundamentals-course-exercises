@@ -1,4 +1,5 @@
 ﻿using AlloyTraining.Business.SelectionFactories;
+using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
@@ -29,5 +30,15 @@ namespace AlloyTraining.Models.Pages
         GroupName = SystemTabNames.Content, Order = 320)]
         [Required]
         public virtual IList<string> UniqueSellingPoints { get; set; }
+
+        [Display(Name = "Main content area",
+                GroupName = SystemTabNames.Content, Order = 330)]
+        [Required]
+        public virtual ContentArea MainContentArea { get; set; }
+
+        [Display(Name = "Related content area",
+                        GroupName = SystemTabNames.Content, Order = 340)]
+        [Required]
+        public virtual ContentArea RelatedContentArea { get; set; }
     }
 }

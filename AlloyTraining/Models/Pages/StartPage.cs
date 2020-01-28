@@ -25,17 +25,17 @@ namespace AlloyTraining.Models.Pages
         GroupName = SystemTabNames.Content, Order = 20)]
         public virtual XhtmlString MainBody { get; set; }
 
-        [Display(Name = "Main content area",
-        Description = "The main content area contains an ordered collection to content references, for example blocks, media assets, and pages.",
-        GroupName = SystemTabNames.Content, Order = 30)]
-        public virtual ContentArea MainContentArea { get; set; }
-
         [CultureSpecific]
         [Display(Name = "Footer text",
         Description = "The footer text will be shown at the bottom of every page.",
         GroupName = SiteTabNames.SiteSettings, Order = 10)]
         public virtual string FooterText { get; set; }
         public virtual decimal Price { get; set; }
-
+        [CultureSpecific]
+        [Display(Name = "Main content area",
+        Description = "Drag and drop iamges, blocks, and pages with påartial templates.",
+        GroupName = SystemTabNames.Content, Order = 30)]
+        [AllowedTypes(typeof(StandardPage), typeof(BlockData), typeof(ImageData))]
+        public virtual ContentArea MainContentArea { get; set; }
     }
 }
