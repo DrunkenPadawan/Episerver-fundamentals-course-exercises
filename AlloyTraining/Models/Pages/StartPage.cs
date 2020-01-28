@@ -30,12 +30,21 @@ namespace AlloyTraining.Models.Pages
         Description = "The footer text will be shown at the bottom of every page.",
         GroupName = SiteTabNames.SiteSettings, Order = 10)]
         public virtual string FooterText { get; set; }
+
         public virtual decimal Price { get; set; }
+
         [CultureSpecific]
         [Display(Name = "Main content area",
         Description = "Drag and drop iamges, blocks, and pages with påartial templates.",
         GroupName = SystemTabNames.Content, Order = 30)]
         [AllowedTypes(typeof(StandardPage), typeof(BlockData), typeof(ImageData))]
         public virtual ContentArea MainContentArea { get; set; }
+
+        [Display(Name = "Search page",
+ Description = "If you add a Search page to the site, set this property to reference it to enable search from every page.",
+ GroupName = SiteTabNames.SiteSettings,
+ Order = 40)]
+        [AllowedTypes(typeof(SearchPage))]
+        public virtual PageReference SearchPageLink { get; set; }
     }
 }

@@ -260,6 +260,7 @@
     <Compile Include="Controllers\PreviewPageController.cs" />
     <Compile Include="Controllers\ProductPartialPageController.cs" />
     <Compile Include="Controllers\ProductPageController.cs" />
+    <Compile Include="Controllers\SearchPageController.cs" />
     <Compile Include="Controllers\StandardPageController.cs" />
     <Compile Include="Controllers\StartPageController.cs" />
     <Compile Include="Controllers\TeaserBlockController.cs" />
@@ -276,6 +277,7 @@
     <Compile Include="Models\Media\SvgFile.cs" />
     <Compile Include="Models\Pages\NewsLandingPage.cs" />
     <Compile Include="Models\Pages\ProductPage.cs" />
+    <Compile Include="Models\Pages\SearchPage.cs" />
     <Compile Include="Models\Pages\SitePageData.cs" />
     <Compile Include="Models\Pages\StandardPage.cs" />
     <Compile Include="Models\Pages\StartPage.cs" />
@@ -284,6 +286,7 @@
     <Compile Include="Models\ViewModels\ListingBlockViewModel.cs" />
     <Compile Include="Models\ViewModels\PageViewModel.cs" />
     <Compile Include="Models\ViewModels\PreviewPageViewModel.cs" />
+    <Compile Include="Models\ViewModels\SearchPageViewModel.cs" />
     <Compile Include="Models\ViewModels\TeaserBlockViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteContentIcons.cs" />
@@ -380,6 +383,8 @@
     <Content Include="Views\Shared\EmployeeBlock.cshtml" />
     <Content Include="Views\ListingBlock\Index.cshtml" />
     <Content Include="Views\NewsLandingPage\Index.cshtml" />
+    <Content Include="Views\Shared\_LeftNavigationMenu.cshtml" />
+    <Content Include="Views\SearchPage\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,7 +7,7 @@
 }
 <div class="row">
     <div class="span4">
-        @RenderSection("_LeftNavigationMenu", required: false)
+        @Html.Partial("_LeftNavigationMenu", Model)
     </div>
     <div class="span8">
         @RenderBody()
